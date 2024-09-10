@@ -1,5 +1,6 @@
 package sem1.task1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class VendingMachine {
@@ -16,6 +17,12 @@ public class VendingMachine {
         return null;
     }
 
-
+    List<Product> initProduct() {
+        List<Product> products = new ArrayList<>();
+        products.add(new Product());
+        products.add(new Product());
+        products.add(new Product());
+        return products;
+    }
 
 }
