@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VendingMachine {
-    List<Product> productList;
-    Integer money;
+    private List<Product> productList;
+    private Integer money;
 
     public Product getProduct(String name) {
         for (Product product: productList) {
