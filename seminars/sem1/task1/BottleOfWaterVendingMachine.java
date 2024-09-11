@@ -22,4 +22,15 @@ public class BottleOfWaterVendingMachine implements VendingMachine {
         return null;
     }
 
+    public BottleOfWater getProduct (String name, int volume) {
+        for (Product product: productList) {
+            if (product instanceof BottleOfWater) {
+                if (product.getName().equals(name) && ((BottleOfWater) product).getVolume() == volume) {
+                    return (BottleOfWater) product;
+                }
+            }
+        }
+        return null;
+    }
+
 }

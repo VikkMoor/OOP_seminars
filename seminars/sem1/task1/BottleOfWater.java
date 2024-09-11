@@ -19,4 +19,11 @@ public class BottleOfWater extends Product {
     public void setVolume(int volume) {
         this.volume = volume;
     }
+
+    @Override
+    public String toString() {
+        return "BottleOfWater{" +
+                "volume= " + volume + ", name= " + getName() +
+                '}';
+    }
 }
