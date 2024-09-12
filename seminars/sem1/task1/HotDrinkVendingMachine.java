@@ -21,6 +21,14 @@ public class HotDrinkVendingMachine implements VendingMachine {
         return null;
     }
 
+    @Override
+    public String toString() {
+        return "HotDrinkVendingMachine{" +
+                "productList=" + productList +
+                ", money=" + money +
+                '}';
+    }
+
     public HotDrink getProduct(String name, int volume, int temp) {
         for (Product product: productList) {
             if (product instanceof HotDrink) {

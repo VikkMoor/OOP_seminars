@@ -10,8 +10,8 @@ public class Main {
         drinks.add(new HotDrink("Coffee", 30, 70));
         drinks.add(new HotDrink("Hot Chocolate", 40, 50));
         HotDrinkVendingMachine test = new HotDrinkVendingMachine(drinks, 500);
-        System.out.println();
-
+        System.out.println(test);
+        System.out.println(test.getProduct("Tea", 20, 60));
     }
 
 }
