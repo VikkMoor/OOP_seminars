@@ -1,7 +1,4 @@
-package sem1.task1;
-
-import java.util.ArrayList;
-import java.util.List;
+package sem1.vending;
 
 public interface VendingMachine {
     Product getProduct (String name);

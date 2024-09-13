@@ -1,4 +1,4 @@
-package sem1.task1;
+package sem1.vending;
 
 public class HotDrink extends Product {
     private int volume;
