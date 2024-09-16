@@ -9,7 +9,7 @@ public class Market implements MarketBehaviour, QueueBehaviour {
     @Override
     public void acceptToMarket(Actor actor) {
         System.out.println(actor.getName() + " came to the market.");
-        takeInQueue(actor); // actor get to the queue;
+        takeInQueue(actor); // Actor get to the queue;
     }
 
     @Override
@@ -35,22 +35,32 @@ public class Market implements MarketBehaviour, QueueBehaviour {
     @Override
     public void takeOrders() {
         for (Actor actor : queue) {
-            System.out.println(actor.getName() + " made the order.");
+            if (!actor.isMakeOrder()) {  // If the customer didnt make an order yet;
+                actor.setMakeOrder(true);
+                System.out.println(actor.getName() + " made the order.");
+            }
         }
     }
 
     @Override
     public void giveOrder() {
         for (Actor actor : queue) {
-            System.out.println(actor.getName() + " got the order.");
+            if (actor.isMakeOrder() && !actor.isTakeOrder()) {  // If the order was made but wasn't get;
+                actor.setTakeOrder(true);
+                System.out.println(actor.getName() + " got the order.");
+            }
         }
     }
 
     @Override
     public void releaseFromQueue() {
-        while (!queue.isEmpty()) {
-            Actor actor = queue.remove(0);  // delete the first actor from queue;
-            System.out.println(actor.getName() + " left the queue.");
+        List<Actor> actorsToRelease = new ArrayList<>();
+        for (Actor actor : queue) {
+            if (actor.isTakeOrder()) {  // Actor can leave the queue if he got the order;
+                actorsToRelease.add(actor);
+                System.out.println(actor.getName() + " is leaving the queue.");
+            }
         }
+        queue.removeAll(actorsToRelease);  // Remove all actors which got the orders;
     }
 }
