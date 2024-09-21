@@ -1,4 +1,4 @@
-package sem1.task1;
+package sem1.vending;
 
 import java.util.List;
 
