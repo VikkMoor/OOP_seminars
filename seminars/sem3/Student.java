@@ -1,6 +1,6 @@
 package sem3;
 
-public class Student {
+public class Student implements Comparable<Student> {
     private Long studentId;
     private String firstName;
     private String lastName;
@@ -36,5 +36,10 @@ public class Student {
 
     public void setMiddName(String middName) {
         this.middName = middName;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return this.studentId.compareTo(o.studentId);
     }
 }

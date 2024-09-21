@@ -1,6 +1,6 @@
 package sem3;
 
-import java.util.Iterator;
+import java.util.*;
 
 public class StudentGroupService {
     private StudentGroup studentGroup;
@@ -13,5 +13,10 @@ public class StudentGroupService {
                 iterator.remove();
             }
         }
+    }
+    public List<Student> getSortedStudentList() {
+        List<Student> studentList = new ArrayList<>(studentGroup.getStudentList());
+        Collections.sort(studentList);
+        return studentList;
     }
 }
