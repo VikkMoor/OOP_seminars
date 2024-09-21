@@ -19,4 +19,10 @@ public class StudentGroupService {
         Collections.sort(studentList);
         return studentList;
     }
+
+    public  List<Student> getSortedStudentByFLM() {
+        List<Student> studentList = new ArrayList<>(studentGroup.getStudentList());
+        studentList.sort(new StudentComparator());
+        return studentList;
+    }
 }

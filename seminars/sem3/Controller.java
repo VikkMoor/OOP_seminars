@@ -9,6 +9,10 @@ public class Controller {
     }
 
     public List<Student> getSortedStudentList() {
-        studentGroupService.getSortedStudentList();
+        return studentGroupService.getSortedStudentList();
+    }
+
+    public List<Student> getSortedStudentByFLM() {
+        return studentGroupService.getSortedStudentByFLM();
     }
 }
