@@ -5,7 +5,7 @@ import java.util.List;
 
 public class StreamIterator implements Iterator<List<StudentGroup>> {
     private int count;
-    private final List<List<StudentGroup>> groupList;
+    private final List<StudentGroup> groupList;
 
     public StreamIterator(Stream stream) {
         this.count = 0;
