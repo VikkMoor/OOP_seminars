@@ -2,7 +2,6 @@ package sem3;
 
 import java.util.Iterator;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class Stream implements Iterable <List<StudentGroup>> {
     private List<StudentGroup> groupList;

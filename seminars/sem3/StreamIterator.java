@@ -4,11 +4,9 @@ import java.util.Iterator;
 import java.util.List;
 
 public class StreamIterator implements Iterator<List<StudentGroup>> {
-    private int count;
-    private final List<StudentGroup> groupList;
+    private List<StudentGroup> groupList;
 
     public StreamIterator(Stream stream) {
-        this.count = 0;
         this.groupList = stream.getGroupList();
     }
 
