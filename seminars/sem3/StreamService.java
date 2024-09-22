@@ -21,7 +21,7 @@ public class StreamService {
     }
 
     // Sort stream method:
-    public void sortStreams() {
+    public void sortStreams(List<Stream> streams) {
         Collections.sort(streams, new StreamComparator());
     }
 }
