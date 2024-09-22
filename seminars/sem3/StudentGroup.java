@@ -10,12 +10,12 @@ public class StudentGroup implements Iterable<Student> {
         return studentList;
     }
 
+    public void setStudentList(List<Student> studentList) {
+        this.studentList = studentList;
+    }
+
     @Override
     public Iterator<Student> iterator() {
         return new StudentGroupIterator(this);
-    }
-
-    public void setStudentList(List<Student> studentList) {
-        this.studentList = studentList;
     }
 }
