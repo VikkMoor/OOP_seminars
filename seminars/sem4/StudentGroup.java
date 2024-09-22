@@ -1,4 +1,4 @@
-package sem3;
+package sem4;
 
 import java.util.Iterator;
 import java.util.List;
@@ -13,6 +13,7 @@ public class StudentGroup implements Iterable<Student> {
     public void setStudentList(List<Student> studentList) {
         this.studentList = studentList;
     }
+
 
     @Override
     public Iterator<Student> iterator() {
