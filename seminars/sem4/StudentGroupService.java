@@ -11,4 +11,8 @@ public class StudentGroupService {
         studentList.sort(new UserComparator<Student>());
         return studentList;
     }
+
+    public void createStudent(String firstName, String lastName, String middleName) {
+        studentGroup.createStudent(firstName, lastName, middleName);
+    }
 }

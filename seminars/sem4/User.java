@@ -5,6 +5,12 @@ public class User {
     private String lastName;
     private String middleName;
 
+    public User(String firstName, String lastName, String middleName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+    }
+
     public String getFirstName() {
         return firstName;
     }
